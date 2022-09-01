@@ -13,6 +13,8 @@ const refs = {
 refs.magicBtn.addEventListener("click", onButtonClickChangeBodyColor);
 
 function onButtonClickChangeBodyColor() {
-  refs.body.style.backgroundColor = getRandomHexColor();
-  refs.span.textContent = getRandomHexColor();
+  const randomColor = getRandomHexColor();
+
+  refs.body.style.backgroundColor = randomColor;
+  refs.span.textContent = randomColor;
 }

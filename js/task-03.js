@@ -13,17 +13,21 @@ const images = [
   },
 ];
 
-const galleryElm = images.map((image) => {
-  const imgElm = document.querySelector(".gallery");
+const imgElm = document.querySelector(".gallery");
 
-  imgElm.insertAdjacentHTML(
-    "afterbegin",
+const galleryElm = images.map(
+  (image) =>
     `<li>
-  <img class="img-task-3" src="${image.url}" alt="#{image.alt}" width = '500px' height = '250px'>
+  <img src="${image.url}" alt="${image.alt}" width = '500px' height = '250px'>
 </li>`
-  );
-  imgElm.style.display = "flex";
-  imgElm.style.flexWrap = "wrap";
-  imgElm.style.alignItems = "center";
-  imgElm.style.listStyle = "none";
-});
+);
+
+imgElm.append(...galleryElm);
+imgElm.insertAdjacentHTML("afterbegin", galleryElm);
+
+imgElm.style.display = "flex";
+imgElm.style.flexWrap = "wrap";
+imgElm.style.alignItems = "center";
+imgElm.style.listStyle = "none";
+
+console.log(galleryElm);
