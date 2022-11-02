@@ -8,11 +8,11 @@ incrementBtn.addEventListener("click", onIncrementValue);
 decrementBtn.addEventListener("click", onDecrementValue);
 
 function onIncrementValue() {
-  counterValue += 1;
+  counterValue++;
   valueElm.textContent = counterValue;
 }
 
 function onDecrementValue() {
-  counterValue -= 1;
+  counterValue--;
   valueElm.textContent = counterValue;
 }
